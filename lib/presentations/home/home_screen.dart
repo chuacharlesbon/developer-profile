@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_html/flutter_html.dart';
 import 'package:go_router/go_router.dart';
 import 'package:myflutterprofile/core/utils/change_favicon.dart';
 import 'package:myflutterprofile/resources/constants/urls.dart';
@@ -41,6 +42,16 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Html(
+              data: '''
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="https://chuacharlesbon.github.io/portfolio-chua/" />
+                <meta property="og:site_name" content="Developer's Portfolio" />
+                <meta property="og:title" content="Charles Chua - Full Stack Developer">
+                <meta property="og:description" content="Developer Portfolio - Charles Bon Chua: Full Stack Developer; Frontend React and Flutter, Backend Nodejs">
+                <meta property="og:image" content="https://pbs.twimg.com/media/FKNlhKZUcAEd7FY?format=jpg&name=4096x4096">
+              ''',
+            ),
             const Text(
               'My Profile',
             ),
