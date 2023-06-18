@@ -5,3 +5,4 @@ import 'package:js/js.dart';
 
 @JS('changeFavicon')
 external void changeFavicon(String path);
+external void changeMeta();

@@ -15,7 +15,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-
   int _counter = 0;
 
   void _incrementCounter() {
@@ -27,6 +26,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     changeFavicon(GlobalUrls.homeIconPath);
+    changeMeta();
     super.initState();
   }
 
