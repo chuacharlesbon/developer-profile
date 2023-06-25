@@ -14,7 +14,7 @@ function changeMeta() {
     }
 
     if ($metaDescription !== null) {
-        $metaDescription.content = 'Full Stack Developer - Profile'
+        $metaDescription.content = 'Developer Portfolio - Charles Bon Chua: Full Stack Developer; Frontend React and Flutter, Backend Nodejs'
         // Otherwise, create a new element and append it to <head>.
     } else {
         $metaDescription = document.createElement("meta")
