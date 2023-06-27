@@ -37,8 +37,14 @@ class _MyHomePageState extends State<MyHomePage> {
     return Seo.head(
       tags: const [
         MetaTag(
+          name: "author",
+          content: "Charles Bon Chua"),
+        MetaTag(
           name: "description",
           content: "Developer Portfolio - Charles Bon Chua: Full Stack Developer; Frontend React and Flutter, Backend Nodejs."),
+        MetaTag(
+          name: "keywords",
+          content: "developer portfolio, charles bon chua, full stack developer, frontend, react, flutter, backend, nodejs, xtendly, xffiliate, okada, cebuana, profile"),
       ],
       child: Scaffold(
         appBar: AppBar(
