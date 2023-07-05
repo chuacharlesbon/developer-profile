@@ -41,10 +41,11 @@ class _MyAppState extends State<MyApp> {
       MetaSEO meta = MetaSEO();
       // Add meta seo data for web app as you want
       meta.author(author: 'Charles Bon Chua');
-      meta.keywords(keywords: 'Flutter, Dart, React, Developer, Software engineer');
-      meta.ogTitle(ogTitle: 'Developer Portfolio');
-      meta.ogDescription(ogDescription: 'Developer Portfolio - Charles Bon Chua: Full Stack Developer; Frontend React and Flutter, Backend Nodejs.');
-      meta.ogImage(ogImage: 'https://github.com/chuacharlesbon/portfolio-chua/blob/master/images/og-image.png?raw=true');
+      meta.keywords(keywords: 'developer portfolio, charles bon chua, full stack developer, frontend, react, flutter, backend, nodejs, xtendly, xffiliate, okada, cebuana, profile');
+      meta.description(description: 'Developer Portfolio - Charles Bon Chua: Full Stack Developer; Frontend React and Flutter, Backend Nodejs.');
+      //meta.ogTitle(ogTitle: 'Developer Portfolio');
+      //meta.ogDescription(ogDescription: 'Developer Portfolio - Charles Bon Chua: Full Stack Developer; Frontend React and Flutter, Backend Nodejs.');
+      //meta.ogImage(ogImage: 'https://github.com/chuacharlesbon/portfolio-chua/blob/master/images/og-image.png?raw=true');
     }
 
     return MaterialApp.router(

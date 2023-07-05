@@ -5,6 +5,7 @@ import 'package:go_router/go_router.dart';
 import 'package:myflutterprofile/core/utils/change_favicon.dart';
 import 'package:myflutterprofile/resources/constants/urls.dart';
 import 'package:seo/seo.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -27,7 +28,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     changeFavicon(GlobalUrls.homeIconPath);
-    changeMeta();
+    //changeMeta();
     super.initState();
   }
 
@@ -36,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
     log('Current Route: ${GoRouter.of(context).location}');
     return Seo.head(
       tags: const [
-        MetaTag(
+        /* MetaTag(
           name: "author",
           content: "Charles Bon Chua"),
         MetaTag(
@@ -44,7 +45,7 @@ class _MyHomePageState extends State<MyHomePage> {
           content: "Developer Portfolio - Charles Bon Chua: Full Stack Developer; Frontend React and Flutter, Backend Nodejs."),
         MetaTag(
           name: "keywords",
-          content: "developer portfolio, charles bon chua, full stack developer, frontend, react, flutter, backend, nodejs, xtendly, xffiliate, okada, cebuana, profile"),
+          content: "developer portfolio, charles bon chua, full stack developer, frontend, react, flutter, backend, nodejs, xtendly, xffiliate, okada, cebuana, profile"), */
       ],
       child: Scaffold(
         appBar: AppBar(
@@ -65,7 +66,17 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: _incrementCounter,
+          onPressed: () {
+            final url = Uri.parse("oma://okadamanila.com?test=true");
+            canLaunchUrl(url).then((canLaunch) {
+              if (canLaunch) {
+                launchUrl(
+                  url,
+                  mode: LaunchMode.externalApplication,
+                );
+              }
+            });
+          },
           tooltip: 'Increment',
           child: const Icon(Icons.add),
         ), // This trailing comma makes auto-formatting nicer for build methods.
