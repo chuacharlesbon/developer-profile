@@ -35,52 +35,39 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     log('Current Route: ${GoRouter.of(context).location}');
-    return Seo.head(
-      tags: const [
-        /* MetaTag(
-          name: "author",
-          content: "Charles Bon Chua"),
-        MetaTag(
-          name: "description",
-          content: "Developer Portfolio - Charles Bon Chua: Full Stack Developer; Frontend React and Flutter, Backend Nodejs."),
-        MetaTag(
-          name: "keywords",
-          content: "developer portfolio, charles bon chua, full stack developer, frontend, react, flutter, backend, nodejs, xtendly, xffiliate, okada, cebuana, profile"), */
-      ],
-      child: Scaffold(
-        appBar: AppBar(
-          title: Text(widget.title),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              'My Profile',
+            ),
+            Text(
+              'Hello',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ],
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              const Text(
-                'My Profile',
-              ),
-              Text(
-                'Hello',
-                style: Theme.of(context).textTheme.headlineMedium,
-              ),
-            ],
-          ),
-        ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            final url = Uri.parse("oma://okadamanila.com?test=true");
-            canLaunchUrl(url).then((canLaunch) {
-              if (canLaunch) {
-                launchUrl(
-                  url,
-                  mode: LaunchMode.externalApplication,
-                );
-              }
-            });
-          },
-          tooltip: 'Increment',
-          child: const Icon(Icons.add),
-        ), // This trailing comma makes auto-formatting nicer for build methods.
-      )
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          final url = Uri.parse("oma://okadamanila.com?test=true");
+          canLaunchUrl(url).then((canLaunch) {
+            if (canLaunch) {
+              launchUrl(
+                url,
+                mode: LaunchMode.externalApplication,
+              );
+            }
+          });
+        },
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
